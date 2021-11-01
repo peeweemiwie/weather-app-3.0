@@ -31,4 +31,4 @@ let currentTimeObj = {
 	minute: currentTime.getMinutes(),
 };
 
-export { currentTimeObj };
+export { currentTimeObj, daysArray, monthArray };
