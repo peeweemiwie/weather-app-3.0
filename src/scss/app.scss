@@ -1,3 +1,11 @@
+@import 'variables.scss';
+@import 'typography.scss';
+
+body {
+	color: $text;
+	font-family: 'Roboto', sans-serif;
+}
+
 .container-page[data-units='imperial'] {
 	.unit-metric {
 		display: none;
