@@ -10,19 +10,19 @@ let displayForecast = (array) => {
 			let month = monthArray[theDateOfIndex.getMonth()].substring(0, 3);
 			let date = theDateOfIndex.getDate();
 			let newDiv = `
-				<section class="d-flex flex-row">
+				<section class="d-flex flex-row justify-content-between align-items-center border-bottom">
 					<section>
 						<div>${day} ${month} ${date}</div>
 						<div>${value.weather[0].description}</div>
 					</section>
-					<div>
+					<section class="d-flex flex-row align-items-center">
 						<img
 							src="http://openweathermap.org/img/wn/${value.weather[0].icon}@2x.png"
 							alt="icon for ${value.weather[0].description}" />
-					</div>
-					<section>
-						<div>${Math.round(value.temp.max)}</div>
-						<div>${Math.round(value.temp.min)}</div>
+						<div>
+							<div>${Math.round(value.temp.max)}</div>
+							<div>${Math.round(value.temp.min)}</div>
+						</div>
 					</section>
 				</section>
 				`;

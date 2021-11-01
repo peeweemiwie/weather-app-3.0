@@ -30,14 +30,15 @@
 	</head>
 	<body>
 		<div
-			class="container container-page"
+			class="container container-page pb-md-3"
 			id="container-page"
 			data-units="imperial"
 		>
 			<h1>Weather App</h1>
-			<section class="container-form" id="container-form">
+			<section class="container-form mb-3" id="container-form">
 				<form action="">
 					<input
+						class="p-1"
 						data-units="imperial"
 						id="input-search"
 						type="text"
@@ -45,24 +46,28 @@
 						placeholder="Enter city name"
 					/>
 					<input
+						class="btn btn-primary"
 						data-units="imperial"
 						id="submit-search"
 						type="submit"
 						value="Search"
 					/>
 					<input
+						class="btn btn-secondary"
 						data-units="imperial"
 						id="submit-imperial"
 						type="submit"
 						value="F"
 					/>
 					<input
+						class="btn btn-secondary"
 						data-units="metric"
 						id="submit-metric"
 						type="submit"
 						value="C"
 					/>
 					<input
+						class="btn btn-link"
 						data-units="imperial"
 						id="submit-current-location"
 						type="submit"
@@ -70,20 +75,42 @@
 					/>
 				</form>
 			</section>
-			<main class="d-flex flex-row container-main" id="container-main">
-				<section class="container-current-weather" id="current-current-weather">
+			<main
+				class="d-flex flex-column flex-md-row container-main"
+				id="container-main"
+			>
+				<section
+					class="
+						container-current-weather
+						col-12 col-md-6
+						p-3
+						mb-3
+						me-md-3
+						border
+					"
+					id="current-current-weather"
+				>
 					<header id="header-current-weather"></header>
-					<div id="container-weather-info">
+					<div
+						id="container-weather-info"
+						class="d-flex flex-row justify-content-between"
+					>
 						<div id="container-icon"></div>
 						<div id="container-weather-main"></div>
 						<div id="container-temperature"></div>
 					</div>
-					<div id="container-humidity-wind">
+					<div
+						id="container-humidity-wind"
+						class="d-flex flex-row justify-content-between"
+					>
 						<div id="container-humidity"></div>
 						<div id="container-wind"></div>
 					</div>
 				</section>
-				<section class="container-forecast" id="container-forecast"></section>
+				<section
+					class="container-forecast col-12 col-md-6 px-3 ms-md-3 border"
+					id="container-forecast"
+				></section>
 			</main>
 		</div>
 		<script type="text/javascript">

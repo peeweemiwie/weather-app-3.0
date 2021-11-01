@@ -17,7 +17,7 @@ let displayCurrentWeather = (data) => {
 	if (inputSearch.value.toLowerCase() !== name.toLowerCase()) {
 		inputSearch.setAttribute('value', name);
 	}
-	let headers = `<h1>${name}</h1><h2>${currentDateTimeLong}</h2>`;
+	let headers = `<h1 class="container-city">${name}</h1><h2 class="container-date">${currentDateTimeLong}</h2>`;
 	let iconImg = `<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="icon for ${description}" />`;
 	let weather = `<div>${main}</div><div>${description}</div>`;
 	let temperature = `

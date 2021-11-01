@@ -64,4 +64,7 @@ document
 	.querySelector('#submit-metric')
 	.addEventListener('click', getLocationAndUnit);
 
+// default information
+createUrlFromSearchValue('New York', 'imperial');
+
 export { getLocationAndUnit, toggleUnitButtons, sendCurrentWeatherData };
