@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'typography.scss';
 @import 'current-weather.scss';
+@import 'header-form.scss';
 
 body {
 	color: $text;
@@ -17,5 +18,12 @@ body {
 .container-page[data-units='metric'] {
 	.unit-imperial {
 		display: none;
+	}
+}
+
+.container-forecast {
+	.icon {
+		height: 80px;
+		width: 80px;
 	}
 }

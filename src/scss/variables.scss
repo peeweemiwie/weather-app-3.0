@@ -37,6 +37,22 @@ $gradient-night: linear-gradient(
 	rgb(0, 55, 79) 60%,
 	rgb(9, 93, 134) 90%
 );
+$gradient-rainbow: linear-gradient(
+	45deg,
+	$danger,
+	$danger 14%,
+	$warning 14%,
+	$warning 28%,
+	yellow 28%,
+	yellow 42%,
+	$success 42%,
+	$success 56%,
+	$primary 56%,
+	$primary 70%,
+	blue 70%,
+	blue 84%,
+	purple 84%
+);
 
 @mixin border-bold($color) {
 	border: 3px solid $color;

@@ -13,7 +13,6 @@ let createUrlFromCurrentLocation = (lat, lon) => {
 let getLongitudeLatitude = (position) => {
 	let lat = position.coords.latitude;
 	let lon = position.coords.longitude;
-	console.log(lat, lon);
 	createUrlFromCurrentLocation(lat, lon);
 };
 

@@ -16,6 +16,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap"
 		rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/app.css" />
 	<title>Weather App 3.0</title>
 </head>
@@ -24,22 +25,26 @@
 	<div class="container col-lg-8 container-page pb-md-3" id="container-page" data-units="imperial">
 		<h1>Weather App</h1>
 		<section class="container-form mb-3" id="container-form">
-			<form action="">
-				<input class="p-1" data-units="imperial" id="input-search" type="text" name="" placeholder="Enter city name" />
-				<input class="btn btn-primary" data-units="imperial" id="submit-search" type="submit" value="Search" />
-				<input class="btn btn-secondary" data-units="imperial" id="submit-imperial" type="submit" value="F" />
-				<input class="btn btn-secondary" data-units="metric" id="submit-metric" type="submit" value="C" />
-				<input class="btn btn-link" data-units="imperial" id="submit-current-location" type="submit"
-					value="Current Location" />
+			<form class="form-location-units d-flex flex-column flex-md-row">
+				<div class="container-input-search col-12 col-md-6 mb-2 mb-md-0 d-flex justify-content-between">
+					<input class="input-search py-1 px-3" data-units="imperial" id="input-search" type="text" name=""
+						placeholder="Enter city name" />
+					<input class="wa-btn wa-btn-primary" data-units="imperial" id="submit-search" type="submit" value="Search" />
+				</div>
+				<div class="col-12 col-md-6 ps-md-2">
+					<input class="btn btn-outline-primary" data-units="imperial" id="submit-current-location" type="submit"
+						value="Current Location" />
+					<input class="btn btn-outline-secondary" data-units="imperial" id="submit-imperial" type="submit" value="F" />
+					<input class="btn btn-outline-secondary" data-units="metric" id="submit-metric" type="submit" value="C" />
+				</div>
 			</form>
 		</section>
-		<main class="d-flex flex-column flex-md-row container-main" id="container-main">
+		<main class="container-main d-flex flex-column flex-md-row justify-content-md-between" id="container-main">
 			<section class="
 						container-current-weather
 						col-12 col-md-6
 						p-3
-						mb-3
-						me-md-3
+						mb-3 mb-md-0
 						border
 					" data-theme="" id="current-weather">
 				<header id="header-current-weather"></header>
@@ -58,7 +63,7 @@
 					<div class="col-6 mx-2 px-2 wa-border" id="container-wind"></div>
 				</div>
 			</section>
-			<section class="container-forecast col-12 col-md-6 px-3 ms-md-3 border" id="container-forecast">
+			<section class="container-forecast col-12 col-md-6 px-3 border" id="container-forecast">
 			</section>
 		</main>
 	</div>

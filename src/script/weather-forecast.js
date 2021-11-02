@@ -17,6 +17,7 @@ let displayForecast = (array) => {
 					</section>
 					<section class="d-flex flex-row align-items-center">
 						<img
+							class="icon"
 							src="http://openweathermap.org/img/wn/${value.weather[0].icon}@2x.png"
 							alt="icon for ${value.weather[0].description}" />
 						<div>
