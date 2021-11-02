@@ -23,9 +23,9 @@ let monthArray = [
 ];
 let currentTime = new Date();
 let currentTimeObj = {
-	month: monthArray[currentTime.getMonth()],
+	month: monthArray[currentTime.getMonth()].substring(0, 3),
 	date: currentTime.getDate(),
-	day: daysArray[currentTime.getDay()],
+	day: daysArray[currentTime.getDay()].substring(0, 3),
 	year: currentTime.getFullYear(),
 	hour: currentTime.getHours(),
 	minute: currentTime.getMinutes(),

@@ -4,10 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			src="https://kit.fontawesome.com/69427b4b41.js"
-			crossorigin="anonymous"
-		></script>
+
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.2/system.js"></script>
@@ -30,7 +27,7 @@
 	</head>
 	<body>
 		<div
-			class="container container-page pb-md-3"
+			class="container col-lg-8 container-page pb-md-3"
 			id="container-page"
 			data-units="imperial"
 		>
@@ -88,23 +85,33 @@
 						me-md-3
 						border
 					"
-					id="current-current-weather"
+					data-theme=""
+					id="current-weather"
 				>
 					<header id="header-current-weather"></header>
 					<div
 						id="container-weather-info"
-						class="d-flex flex-row justify-content-between"
+						class="container-weather-info d-flex flex-column mb-4"
 					>
-						<div id="container-icon"></div>
-						<div id="container-weather-main"></div>
-						<div id="container-temperature"></div>
+						<div
+							class="col d-flex justify-content-center"
+							id="container-icon"
+						></div>
+						<div
+							class="col d-flex justify-content-center align-items-baseline"
+							id="container-weather-main"
+						></div>
+						<div
+							class="col d-flex justify-content-center align-items-baseline"
+							id="container-temperature"
+						></div>
 					</div>
 					<div
 						id="container-humidity-wind"
-						class="d-flex flex-row justify-content-between"
+						class="mb-3 d-flex flex-row justify-content-center"
 					>
-						<div id="container-humidity"></div>
-						<div id="container-wind"></div>
+						<div class="col-6 mx-2 px-2 border" id="container-humidity"></div>
+						<div class="col-6 mx-2 px-2 border" id="container-wind"></div>
 					</div>
 				</section>
 				<section

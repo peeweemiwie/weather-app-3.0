@@ -12,33 +12,49 @@ let displayCurrentWeather = (data) => {
 		wind: { speed },
 	} = data;
 
-	//set input value to the city name.
+	//set input value to name of the city.
 	let inputSearch = document.querySelector('#input-search');
 	if (inputSearch.value.toLowerCase() !== name.toLowerCase()) {
 		inputSearch.setAttribute('value', name);
 	}
-	let headers = `<h1 class="container-city">${name}</h1><h2 class="container-date">${currentDateTimeLong}</h2>`;
+	let headers = `
+		<h1 class="container-city text-center">${name}</h1>
+		<h2 class="container-date text-center">${currentDateTimeLong}</h2>`;
+
+	// change the background depends on day or night
+	let currentWeather = document.querySelector('#current-weather');
+	icon.indexOf('d') > -1
+		? currentWeather.setAttribute('data-theme', 'light')
+		: currentWeather.setAttribute('data-theme', 'dark');
+
 	let iconImg = `<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="icon for ${description}" />`;
-	let weather = `<div>${main}</div><div>${description}</div>`;
+
+	let weather = `
+		<div class="px-1 major">${main}</div>
+		<div class="px-1 minor">${description}</div>`;
+
 	let temperature = `
-		<div>
+		<div class="px-1 major">
       ${Math.round(temp)}
       <span class="unit-imperial">F</span>
       <span class="unit-metric">C</span>
     </div>
-		<div>
+		<div class="px-1 minor">
       feels like
       ${Math.round(feels_like)}
       <span class="unit-imperial">F</span>
       <span class="unit-metric">C</span>
     </div>`;
-	let humidityElem = `<div>humidity</div><div>${humidity}%</div>`;
+
+	let humidityElem = `
+		<div class="text-center">Humidity</div>
+		<div class="text-center">${humidity}%</div>`;
+
 	let wind = `
-    <div>wind</div>
-    <div>
+    <div class="text-center">Wind</div>
+    <div class="text-center">
       ${Math.round(speed)}
-      <span class="unit-imperial">m</span>
-      <span class="unit-metric">k</span>ph
+      <span class="unit-imperial">m</span><span class="unit-metric">k</span>ph
     </div>`;
 	document.querySelector('#container-icon').innerHTML = iconImg;
 	document.querySelector('#header-current-weather').innerHTML = headers;
