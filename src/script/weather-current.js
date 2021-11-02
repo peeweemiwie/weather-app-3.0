@@ -12,11 +12,6 @@ let displayCurrentWeather = (data) => {
 		wind: { speed },
 	} = data;
 
-	//set input value to name of the city.
-	let inputSearch = document.querySelector('#input-search');
-	if (inputSearch.value.toLowerCase() !== name.toLowerCase()) {
-		inputSearch.setAttribute('value', name);
-	}
 	let headers = `
 		<h1 class="container-city">${name}</h1>
 		<h2 class="container-date">${currentDateTimeLong}</h2>`;
@@ -69,6 +64,9 @@ let displayCurrentWeather = (data) => {
 	document.querySelector('#container-temperature').innerHTML = temperature;
 	document.querySelector('#container-humidity').innerHTML = humidityElem;
 	document.querySelector('#container-wind').innerHTML = wind;
+
+	//set input value to name of the city.
+	document.querySelector('#input-search').value = name;
 };
 
 export { displayCurrentWeather };
