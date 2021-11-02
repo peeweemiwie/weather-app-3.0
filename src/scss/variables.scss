@@ -19,12 +19,18 @@ $font-size-reg: 24px;
 $font-size-s: 16px;
 $font-size-xs: 14px;
 
+$gradient-blue: rgb(137, 210, 253);
+$gradient-yellow: rgb(255, 241, 188);
 $gradient-day: radial-gradient(
 	circle at 100% 10%,
-	rgb(255, 241, 188) 0%,
-	rgb(137, 210, 253) 50%
+	$gradient-yellow 0%,
+	$gradient-blue 50%
 );
-
+$gradient-cloudy: radial-gradient(
+	circle at 100% 10%,
+	desaturate($gradient-yellow, 60%) 0%,
+	desaturate($gradient-blue, 60%) 50%
+);
 $gradient-night: linear-gradient(
 	45deg,
 	rgba(4, 0, 51, 0.95) 40%,

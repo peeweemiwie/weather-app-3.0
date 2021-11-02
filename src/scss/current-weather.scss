@@ -3,6 +3,10 @@
 .container-date {
 	font-size: $font-size-reg;
 }
+.container-city {
+	font-size: $font-size-reg;
+}
+
 .container-current-weather {
 	&[data-theme='dark'] {
 		background: $gradient-night;
@@ -21,20 +25,41 @@
 	//light theme
 	&[data-theme='light'] {
 		background: $gradient-day;
-		.container-icon {
-			@include border-bold($light-gray);
-		}
-		.we-weather-details .we-list-group {
-			@include border-bold($light-gray);
-		}
+	}
+	&[data-theme='cloudy'] {
+		background: $gradient-cloudy;
 	}
 }
 
-.container-weather-info {
+.container-temperature {
+	text-align: right;
+	.major {
+		font-size: $font-size-l;
+	}
+	.minor {
+		font-size: $font-size-s;
+	}
+}
+
+.container-weather-main {
 	.major {
 		font-size: $font-size-reg;
 	}
 	.minor {
 		font-size: $font-size-s;
+	}
+}
+
+.container-weather-info {
+	.img-weather {
+		@include border-bold($white);
+		border-radius: 50%;
+	}
+}
+
+.container-humidity-wind {
+	.wa-border {
+		@include border-bold($white);
+		border-radius: 3px;
 	}
 }
